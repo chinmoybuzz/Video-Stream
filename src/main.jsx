@@ -6,6 +6,7 @@ import AdminLayout from "./appLayout/AdminLayout";
 import AdminAuthWrapper from "./components/auth/AdminAuthWrapper";
 import Home from "./pages/Home";
 import { lazy, Suspense } from "react";
+import Video from "./pages/admin/video/Video";
 
 const NotFound = () => {
   return (
@@ -77,6 +78,14 @@ const router = createBrowserRouter([
           {
             path: "users",
             element: <h1>Uses List</h1>,
+          },
+          {
+            path: "videos",
+            element: <Video />,
+          },
+          {
+            path: "*",
+            element: <NotFound />,
           },
         ],
       },
